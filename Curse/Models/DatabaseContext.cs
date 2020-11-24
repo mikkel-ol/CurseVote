@@ -28,7 +28,5 @@ namespace Curse.Models
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<Nominee>().ToTable("Nominee");
         }
-
-        //protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlServer("Server=tcp:curseserver.database.windows.net,1433;Initial Catalog=CurseDatabase;Persist Security Info=False;User ID=martin;Password=Br357fl0d4;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
     }
 }
