@@ -1,0 +1,50 @@
+﻿@page
+@model Curse.Pages.VoteModel
+
+@{
+    ViewData["Title"] = "Vote";
+}
+
+<h1>Vote</h1>
+
+<div>
+    <hr />
+    
+    <dl class="row">
+    </dl>
+    <form method="post">
+        <label>Priority 1</label>
+        <select name="Prio1Listbox" id="listbox" asp-for="User.Prio1">
+            @foreach (var item in Model.Nominees)
+           {
+            <option value="@item.Id">
+                @item.Name
+            </option>
+           }
+        </select>
+        <hr />
+        <label>Priority 2</label>
+        <select name="Prio2Listbox" id="listbox" asp-for="User.Prio2">
+            @foreach (var item in Model.Nominees)
+           {
+            <option value="@item.Id">
+                @item.Name
+            </option>
+           }
+        </select>
+        <hr />
+        <label>Priority 3</label>
+        <select name="Prio3Listbox" id="listbox" asp-for="User.Prio3">
+            @foreach (var item in Model.Nominees)
+           {
+            <option value="@item.Id">
+                @item.Name
+            </option>
+           }
+        </select>
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Vote" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
